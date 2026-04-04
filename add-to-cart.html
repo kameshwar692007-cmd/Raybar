@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ADD-TO-CART</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="We sell amazing solar-powered power banks at affordable prices across different ranges. Discover the perfect power bank for your needs!">
+</head>
+<style>
+    * {
+        margin: 0px;
+
+
+    }
+
+    body {
+        background-image: url(bg1c.jpg);
+        background-repeat: repeat;
+        background-size:cover;
+        background-position: center;
+        min-height: 100vh;
+    }
+
+    NAV {
+        background: linear-gradient(135deg, #5372ff 20%, #16002c);
+        box-shadow: 3PX 3px 5px 0 rgba(155, 144, 144, 0.827),
+
+    }
+
+    NAV UL {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    NAV LI {
+        height: 50px;
+    }
+
+    NAV A {
+        color: #ffffff;
+        HEIGHT: 100%;
+        PADDING: 0 30PX;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+
+    }
+
+
+
+    nav li:first-child {
+        margin-right: auto;
+        font-size: 3em;
+
+    }
+
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        z-index: 999;
+        background-color: rgba(0, 0, 0, 0.733);
+        backdrop-filter: blur(10px);
+        box-shadow: -10px 0 -10px rgba(0, 0, 0, 0.114);
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .sidebar li {
+        width: 100%;
+    }
+
+    .sidebar a {
+        width: 100%
+    }
+
+    .menu {
+        display: none;
+    }
+
+    a {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    a:hover {
+        color: aqua;
+        transform: scale(1.05);
+        transition: transform 0.3s;
+    }
+
+    @media(max-width:800px) {
+        .hideonmobile {
+            display: none;
+        }
+
+        .menu {
+            display: block;
+        }
+        .container{
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .prd{
+            img{
+                max-width: 300px;
+                max-height: 300px;
+            }
+        }
+    }
+
+    @media(max-width:400px) {
+        .sidebar {
+            width: 100%;
+        }
+        .prd{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0px;
+
+            img {
+                max-width: 300px;
+                max-height: 300px;
+            }
+
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+    }
+
+
+    img {
+        padding: 30px;
+        width: 400px;
+        height: 350px;
+        opacity: 0.8;
+    }
+
+    img:hover {
+        opacity: 0.6;
+        transform: scale(1.05);
+        transition: transform 0.3s;
+    }
+
+    button {
+        width: 100px;
+        height: fit-content;
+        padding: 12px;
+        background: #667eea;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        font-weight: 600;
+        margin-left: 30px;
+        display: flex;
+        clear: left;
+        align-items: center;
+    }
+
+    button:hover {
+        background-color: white;
+        color: #667eea;
+        transition: 0.5s;
+        transform: scale(1.09);
+        transition: transform 0.3s;
+    }
+
+    h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 3em;
+        margin-left: 5px;
+    }
+
+
+
+    img {
+        width: 600px;
+        height: 600px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 10px;
+        margin-left: 50px;
+        width: fit-content;
+        height: fit-content;
+
+    }
+
+    .prd {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: space-evenly;
+    }
+
+    h2 {
+        font-family: sans-serif;
+        font-size: 2em;
+        color: #667eea;
+    }
+
+    #price,
+    #details {
+        font-family: sans-serif;
+        font-size: 1.2em;
+        color: white;
+        background-color: black;
+        box-shadow: 0 0 25px 10px blue;
+        border: 2px;
+
+    }
+
+
+    div {
+        padding-top: 50px;
+        padding: 30px;
+
+
+
+    }
+    footer{
+        padding: 20px;
+        background-color: rgb(26, 24, 24);
+        color: #ffffff;
+        font-family:Arial, Helvetica, sans-serif;
+        a:hover{
+            text-decoration: none;
+            color: rgb(69, 74, 234);
+        }
+    }
+
+</style>
+
+<body>
+    <section id="home">
+        <nav>
+            <ul class="sidebar">
+                <li class="hh"><a href="about-us.html">RAYBAR</a></li>
+                <li onclick=hidesidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px"
+                            viewBox="0 -960 960 960" width="26px" fill="#e3e3e3">
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg></a></li>
+                <li id="h"><a href="home.html">HOME</a></li>
+                <li id="h"><a href="view.html">PRODUCTS</a></li>
+                <li id="h"><a href="add-to-cart.html">ADD TO CART</a></li>
+                <li id="h"><a href="prices.html">OFFERS</a></li>
+                <li id="h"><a href="review.html">REVIEWS</a></li>
+                <li id="h"><a href="contact-us.html">CONTACT US</a></li>
+                <li id="h"><a href="login.html">SIGNOUT</a></li>
+            </ul>
+            <ul>
+                <li class="hh"><a href="about-us.html">RAYBAR</a></li>
+                <li id="h" class="hideonmobile"><a href="home.html">HOME</a></li>
+                <li id="h" class="hideonmobile"><a href="view.html">PRODUCTS</a></li>
+                <li id="h" class="hideonmobile"><a href="add-to-cart.html">ADD TO CART</a></li>
+                <li id="h" class="hideonmobile"><a href="prices.html">OFFERS</a></li>
+                <li id="h" class="hideonmobile"><a href="review.html">REVIEWS</a></li>
+                <li id="h" class="hideonmobile"><a href="contact-us.html">CONTACT US</a></li>
+                <li id="h" class="hideonmobile"><a href="login.html">SIGNOUT</a></li>
+                <li class="menu" onclick=showsidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px"
+                            viewBox="0 -960 960 960" width="26px" fill="#e3e3e3">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                        </svg></a></li>
+            </ul>
+        </nav>
+    </section>
+    <HR>
+    <center>
+        <div class="prd">
+            <img src="product1.jpg" alt="hero image">
+            <section class="container">
+                <div id="details">
+                    <h2> Details </h2>
+                    <p>weight=80g</p>
+                    <p>power2000mah</p>
+                    <p>50wph</p>
+                </div>
+                <div id="price">
+                    <h2> Price Details </h2>
+                    <p>product charge:30$</p>
+                    <p>shiping cost : 3$</p>
+                    <p>shipping tax :4$</p>
+                    <P>total charge: 37$</P>
+                    <P>After discount: 35$</P>
+                </div>
+            </section>
+            <button id="p">Place Order</button>
+        </div><br>
+    </center><hr>
+    <footer>
+        <p>&copy;The above mensioned products are subjected to the terms and conditions read them before buying products <a href="">learnmore</a>  & <a href="terms&cond.html">terms and conditions</a></p>
+    </footer><hr>
+    <script>
+        let p = document.getElementById("p");
+        p.addEventListener("click", function () {
+            alert("Congratulations! Your Order has been placed");
+        })
+        function showsidebar() {
+            document.querySelector('.sidebar').style.display = 'flex';
+        }
+        function hidesidebar() {
+            document.querySelector('.sidebar').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

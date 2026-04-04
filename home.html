@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HOME</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="We sell amazing solar-powered power banks at affordable prices across different ranges. Discover the perfect power bank for your needs!">
+</head>
+<style>
+    * {
+        margin: 0px;
+        color: white;
+    }
+
+    body {
+        background-image: url(bg1c.jpg);
+        background-repeat:repeat;
+        background-size: cover;
+        background-position: center;
+        max-height: 100vh;
+    }
+
+    NAV {
+        background: linear-gradient(135deg, #5372ff 20%, #16002c);
+        max-width: 100%;
+    }
+
+    NAV UL {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    NAV LI {
+        height: 50px;
+    }
+
+    NAV A {
+        color: #ffffff;
+        HEIGHT: 100%;
+        PADDING: 0 30PX;
+        text-decoration: none;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+    }
+
+
+
+    nav li:first-child {
+        margin-right: auto;
+        font-size: 3em;
+
+    }
+
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        z-index: 999;
+        background-color: rgba(0, 0, 0, 0.733);
+        backdrop-filter: blur(10px);
+        box-shadow: -10px 0 -10px rgba(0, 0, 0, 0.114);
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+    }
+
+    .sidebar li {
+        width: 100%;
+    }
+
+    .sidebar a {
+        width: 100%
+    }
+
+    .menu {
+        display: none;
+    }
+
+    a {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    a:hover {
+        color: aqua;
+        transform: scale(1.05);
+        transition: transform 0.3s;
+    }
+    .menu:hover{
+        transform: rotate(180deg) scale(0.8);
+        transition: transform 0.5s;
+
+    }
+
+    @media(max-width:800px) {
+        .hideonmobile {
+            display: none;
+        }
+
+        .menu {
+            display: block;
+        }
+
+        .prodpg {
+            box-shadow: none;
+        }
+    }
+
+    @media(max-width:400px) {
+        .sidebar {
+            width: 100%;
+        }
+
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-shrink: 1;
+        border-radius: 20px;
+        max-width: 800px;
+        min-width: 300px;
+        margin: 40px auto;
+        height: fit-content;
+        padding: 30PX;
+        color: white;
+        background-color: cornflowerblue;
+
+
+    }
+
+
+    .prodpg {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        border-radius: 40px;
+        padding: 10px;
+        background-color: rgb(17, 15, 15);
+        box-shadow: 0 0 25px 10px rgb(52, 49, 238);
+        width: auto;
+        max-width: fit-content;
+        height: fit-content;
+
+
+    }
+    .prodpg:hover{
+       transform: perspective(1000px) rotateX,Y,Z(10deg);
+    
+    }
+
+    .btn {
+        width: fit-content;
+        height: 50px;
+
+    }
+
+    .btn:hover {
+        background-color: rgb(41, 46, 44);
+        cursor: pointer;
+        transform: scale(1.05);
+        transition: transform 0.3s;
+    }
+
+    .button {
+        width: 110px;
+        padding: 12px;
+        background: #667eea;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        margin: 10px;
+        font-weight: 600;
+    }
+
+    .button:hover {
+        background-color: white;
+        color: #667eea;
+        transition: 0.5s;
+        transform: scale(1.05);
+        transition: transform 0.3s;
+    }
+
+    #btn {
+        border: none;
+        border-radius: 45%;
+
+    }
+
+    #btn:hover {
+
+        cursor: pointer;
+        transform: scale(1.05);
+        transition: transform 0.3s;
+    }
+</style>
+
+<body>
+    <!--homepage-->
+    <div id="home">
+        <nav>
+            <ul class="sidebar">
+                <li class="hh"><a href="about-us.html">RAYBAR</a></li>
+                <li onclick=hidesidebar() ><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px"
+                            viewBox="0 -960 960 960" width="26px" fill="#e3e3e3">
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg></a></li>
+                <li id="h"><a href="home.html">HOME</a></li>
+                <li id="h"><a href="view.html">PRODUCTS</a></li>
+                <li id="h"><a href="add-to-cart.html">ADD TO CART</a></li>
+                <li id="h"><a href="prices.html">OFFERS</a></li>
+                <li id="h"><a href="review.html">REVIEWS</a></li>
+                <li id="h"><a href="contact-us.html">CONTACT US</a></li>
+                <li id="h"><a href="login.html">SIGNOUT</a></li>
+            </ul>
+            <ul>
+                <li class="hh"><a href="about-us.html">RAYBAR</a></li>
+                <li id="h" class="hideonmobile"><a href="home.html">HOME</a></li>
+                <li id="h" class="hideonmobile"><a href="view.html">PRODUCTS</a></li>
+                <li id="h" class="hideonmobile"><a href="add-to-cart.html">ADD TO CART</a></li>
+                <li id="h" class="hideonmobile"><a href="prices.html">OFFERS</a></li>
+                <li id="h" class="hideonmobile"><a href="review.html">REVIEWS</a></li>
+                <li id="h" class="hideonmobile"><a href="contact-us.html">CONTACT US</a></li>
+                <li id="h" class="hideonmobile"><a href="login.html">SIGNOUT</a></li>
+                <li class="menu" onclick=showsidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px"
+                            viewBox="0 -960 960 960" width="26px" fill="#e3e3e3">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                        </svg></a></li>
+            </ul>
+        </nav>
+    </div>
+    <hr>
+    <section class="container">
+        <div>
+            <div class="welcome-banner">
+                <h1>Welcome to RAYBAR</h1><br>
+                <p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Discover amazing SOLAR products with great reviews from
+                    our community we are the new revolutionary team of this modern world where we use renewable energy
+                    source </p>
+            </div>
+    </section>
+    <center>
+        <section class="prodpg">
+            <video autoplay loop muted height="500px" width="500px" id="myvideo">
+                <source src="adc.mp4">
+            </video>
+            <div>
+                <button id="btn">🔇</button><br>
+            </div>
+            <div>
+                <button id="view" class="button">PRODUCTS</button>
+                <button id="abt" class="button">About Us</button>
+            </div>
+        </section>
+    </center>
+    <!--homepage-->
+    <script>
+        let view = document.getElementById("view");
+        view.addEventListener("click", function () {
+            window.location.href = "view.html";
+        });
+        let abt = document.getElementById("abt");
+        abt.addEventListener("click", function () {
+            window.location.href = "about-us.html";
+        });
+        let video = document.getElementById("myvideo")
+        let pybtn = document.getElementById("btn")
+        pybtn.addEventListener("click", () => {
+            video.muted = !video.muted;
+            if (video.muted) {
+                pybtn.innerHTML = "🔇"
+            } else {
+                pybtn.innerHTML = "🔊"
+            };
+        });
+
+        function showsidebar() {
+            document.querySelector('.sidebar').style.display = 'flex';
+        }
+        function hidesidebar() {
+            document.querySelector('.sidebar').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

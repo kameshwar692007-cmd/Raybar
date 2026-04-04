@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>OFFERS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="We sell amazing solar-powered power banks at affordable prices across different ranges. Discover the perfect power bank for your needs!">
+</head>
+<style>
+    * {
+        margin: 0px;
+        color: white;
+
+    }
+
+    body {
+       
+        box-shadow: 10px 10px 10px #16002c;
+        min-height: 100vh;
+    }
+
+    NAV {
+        background: linear-gradient(135deg, #5372ff 20%, #16002c);
+        box-shadow: 3PX 3px 5px 0 rgba(155, 144, 144, 0.827),
+
+    }
+
+    NAV UL {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    NAV LI {
+        height: 50px;
+    }
+
+    NAV A {
+        color: #ffffff;
+        HEIGHT: 100%;
+        PADDING: 0 30PX;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+
+    }
+
+
+
+    nav li:first-child {
+        margin-right: auto;
+        font-size: 3em;
+
+    }
+
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        z-index: 999;
+        background-color: rgba(0, 0, 0, 0.733);
+        backdrop-filter: blur(10px);
+        box-shadow: -10px 0 -10px rgba(0, 0, 0, 0.114);
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .sidebar li {
+        width: 100%;
+    }
+
+    .sidebar a {
+        width: 100%
+    }
+
+    .menu {
+        display: none;
+    }
+
+    a {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    a:hover {
+        color: aqua;
+        transform: scale(1.05);
+        transition: transform 0.3s;
+    }
+
+    @media(max-width:800px) {
+        .hideonmobile {
+            display: none;
+        }
+
+        .menu {
+            display: block;
+        }
+    }
+
+    @media(max-width:400px) {
+        .sidebar {
+            width: 100%;
+        }
+
+        .prodbox {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0px;
+
+            img {
+                max-width: 300px;
+                max-height: 300px;
+            }
+
+        }
+
+    }
+
+    .prodbox {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        column-gap: 40px;
+        row-gap: 15px;
+        clear: both;
+
+        padding: 50px;
+        background-color: rgb(17, 15, 15);
+    }
+
+    img {
+        width: 400px;
+        height: 350px;
+    }
+
+    img:hover {
+        opacity: 0.6;
+        transform: scale(1.05);
+        transition: transform 0.3s;
+        animation: ease-in;
+    }
+
+    button {
+        width: 100px;
+        padding: 12px;
+        background: #667eea;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: url(shopping-cart.png), auto;
+        margin-top: 10px;
+
+        font-weight: 600;
+    }
+
+    button:hover {
+        background-color: white;
+        color: #667eea;
+        transition: 0.5s;
+    }
+
+    h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 3em;
+        margin-left: 5px;
+    }
+
+    h2 {
+        text-decoration: underline;
+        font-size: 1.2em;
+        margin-top: 10px;
+    }
+</style>
+
+<body>
+    <div id="home">
+        <nav>
+            <ul class="sidebar">
+                <li class="hh"><a href="about-us.html">RAYBAR</a></li>
+                <li onclick=hidesidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px"
+                            viewBox="0 -960 960 960" width="26px" fill="#e3e3e3">
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg></a></li>
+                <li id="h"><a href="home.html">HOME</a></li>
+                <li id="h"><a href="view.html">PRODUCTS</a></li>
+                <li id="h"><a href="add-to-cart.html">ADD TO CART</a></li>
+                <li id="h"><a href="prices.html">OFFERS</a></li>
+                <li id="h"><a href="review.html">REVIEWS</a></li>
+                <li id="h"><a href="contact-us.html">CONTACT US</a></li>
+                <li id="h"><a href="login.html">SIGNOUT</a></li>
+            </ul>
+            <ul>
+                <li class="hh"><a href="about-us.html">RAYBAR</a></li>
+                <li id="h" class="hideonmobile"><a href="home.html">HOME</a></li>
+                <li id="h" class="hideonmobile"><a href="view.html">PRODUCTS</a></li>
+                <li id="h" class="hideonmobile"><a href="add-to-cart.html">ADD TO CART</a></li>
+                <li id="h" class="hideonmobile"><a href="prices.html">OFFERS</a></li>
+                <li id="h" class="hideonmobile"><a href="review.html">REVIEWS</a></li>
+                <li id="h" class="hideonmobile"><a href="contact-us.html">CONTACT US</a></li>
+                <li id="h" class="hideonmobile"><a href="login.html">SIGNOUT</a></li>
+                <li class="menu" onclick=showsidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px"
+                            viewBox="0 -960 960 960" width="26px" fill="#e3e3e3">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                        </svg></a></li>
+            </ul>
+        </nav>
+    </div>
+    <HR>
+
+    <section class="prodbox">
+        <div>
+            <img src="dproduct1.jpg" alt="product-img">
+            <h2>Product description</h2>
+            <p>RAYBAR 20000 mAh Premium Edition Nano Power Bank | Two-Way 22.5W Super Fast Charging | Pocket Size| Dual
+                Type C Power Delivery (PD) Output + 1 USB Output for Quick Charge (Black) USB Type-C Input</p>
+            <p><del>₹3000</del></p>
+            <p><ins>₹1200</ins></p>
+            <button id="add1">BUY NOW</button>
+        </div>
+
+        <div>
+            <img src="dproduct2.jpg" alt="product-img">
+            <h2>Product description</h2>
+            <p>RAYBAR 20000mAh Small Pocket Size Powerbank, Hanging InBuilt Type C Cable, 22.5W Fast Charging, Type C PD
+                & USB Output for iPhone, Android Mobiles & Other Devices (MiniCharge 20, Black-Grey)</p>
+            <p><del>₹4500</del></p>
+            <p><ins>₹1800</ins></p>
+            <button id="add1">BUY NOW</button>
+        </div>
+
+        <div>
+            <img src="dproduct3.jpg" alt="product-img">
+            <h2>Product description</h2>
+            <p>RAYBAR Energyshroom PB435 20000 mAh 35W Super Fast Charging Power Bank, Smart 12 Layer Protection (4X
+                Output Ports, Supports Android, iPhone, Tablets, Earbuds, etc.) (green)</p>
+            <p><del>₹2800</del></p>
+            <p><ins>₹1120</ins></p>
+            <button id="add1">BUY NOW</button>
+        </div>
+
+        <div>
+            <img src="dproduct4.jpg" alt="product-img">
+            <h2>Product description</h2>
+            <p>RAYBAR 20000mAh Powerbank with in-Build Type C Cable, 22.5W Fast Charging, USB & Type C Output, Power
+                Delivery, Quick Charge for Android Mobile & Tablets, Earbuds</p>
+            <p><del>₹2600</del></p>
+            <p><ins>₹1040</ins></p>
+            <button id="add1">BUY NOW</button>
+        </div>
+
+        <div>
+            <img src="dproduct5.jpg" alt="product-img">
+            <h2>Product description</h2>
+            <p>RAYBAR slim-bar 20000mAh 35W Turbo Fast Charging Power Bank | Dual Output | PD + QC Compatible | Two-Way
+                Fast Charge | Pass-Through Charging | for MacBook Air, iPhone, Samsung, Android & More (Camo)</p>
+            <p><del>₹1499</del></p>
+            <p><ins>₹599</ins></p>
+            <button id="add1">BUY NOW</button>
+        </div>
+
+        <div>
+            <img src="product3.jpg" alt="product-img">
+            <h2>Product description</h2>
+            <p>RAYBAR 20000mAh 35W Turbo Fast Charging Power Bank | Dual Output | PD + QC Compatible | Two-Way Fast
+                Charge | Pass-Through Charging | for MacBook Air, iPhone, Samsung, Android & More (Camo)</p>
+            <p><del>₹1499</del></p>
+            <p><ins>₹899</ins></p>
+            <button id="add1">BUY NOW</button>
+        </div>
+    </section>
+    <div>
+        <script>
+            let add1 = document.getElementById("add1");
+            add1.addEventListener("click", function () {
+                window.location.href = "add-to-cart.html";
+            })
+            function showsidebar() {
+                document.querySelector('.sidebar').style.display = 'flex';
+            }
+            function hidesidebar() {
+                document.querySelector('.sidebar').style.display = 'none';
+            }
+        </script>
+</body>
+
+</html>

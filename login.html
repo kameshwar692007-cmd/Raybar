@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Login Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="We sell amazing solar-powered power banks at affordable prices across different ranges. Discover the perfect power bank for your needs!">
+    <style>
+        * {
+            color: rgb(255, 255, 255);
+        }
+
+        body {
+            background: url(https://img.freepik.com/premium-photo/abstract-illuminated-lithium-ion-battery-shape-with-lightning-bolt-icon-dark-background-concept-technology-battery-lighting-abstract-art-dark-background_918839-217165.jpg);
+            background-position: center;
+            background-repeat: repeat;
+            background-size: cover;
+
+
+
+        }
+
+        @media(max-width:800px) {
+            .logbox {
+                display: flex;
+                width: 40%;
+                height: 50%;
+                color: rgb(0, 0, 0);
+                padding: 10px;
+                align-items: center;
+                align-content: center;
+                justify-content: center;
+                margin: 20% auto 30% auto;
+                border-radius: 20px;
+                backdrop-filter: blur(5px);
+
+
+            }
+
+            body {
+                background: url(logbackmob.jpg);
+                background-repeat: repeat;
+                background-position: center;
+
+            }
+
+            .head {
+                font-size: 0px;
+                color: #ffffff;
+            }
+
+        }
+
+        .logbox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: space-evenly;
+            justify-content: center;
+            padding: 20PX;
+            flex-wrap: wrap;
+            text-align: center;
+            background: transparent;
+            border: 2px solid rgb(112, 201, 226);
+            width: fit-content;
+            height: fit-content;
+            margin: 5% auto 15% auto;
+            border-radius: 40px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 25px 10px blue;
+
+        }
+
+        .input {
+            font-family: sans-serif;
+
+        }
+
+        .logbox input {
+            border: none;
+            background: transparent;
+            outline: none;
+            border-bottom: 2px solid rgb(255, 255, 255);
+        }
+
+        h2 {
+            font-size: 2em;
+            font-family: sans-serif;
+        }
+
+        #lg {
+            width: 200px;
+            height: 30px;
+            background: linear-gradient(135deg, #5372ff 20%, #16002c);
+            color: white;
+            font-size: medium;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 10px;
+            border: none;
+
+
+        }
+
+        #lg:hover {
+            opacity: 0.7;
+            transition: 0.5s;
+            cursor: pointer;
+            transform: scale(1.05);
+            transition: transform 0.3s;
+        }
+
+        a {
+            font-family: sans-serif;
+        }
+
+        a:hover {
+            color: #5372ff;
+            transition-duration: 0.3s;
+        }
+
+        .head {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            text-shadow: 0 10px 20px navy;
+            font-size: 3em;
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <br>
+    <h1 class="head"> RAYBAR.COM </h1><br><br>
+    <section class="logbox">
+        <h2>Login</h2>
+        <label class="input">Username:
+            <input type="text" id="u" placeholder="Enter the username">
+        </label>
+        <br><br>
+        <label class="input">Password:
+            <input type="password" id="pa3" placeholder="Enter your password">
+        </label>
+        <br><br>
+        <button id="lg">Login</button>
+        <br><br>
+        <a href="signup.html">Back to Sign Up</a>
+    </section>
+    <script>
+        let u = document.getElementById("u");
+        let pa3 = document.getElementById("pa3");
+        let lg = document.getElementById("lg");
+        lg.addEventListener("click", function () {
+            if (u.value == "") {
+                alert("Username cannot be empty");
+                return;
+            }
+            if (pa3.value == "") {
+                alert("Password cannot be empty");
+                return;
+            }
+            else {
+                confirm("Log In successful!");
+                window.location.href = "home.html";
+            }
+        })
+
+    </script>
+</body>
+
+</html>

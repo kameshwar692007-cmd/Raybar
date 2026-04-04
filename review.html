@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HOME</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="We sell amazing solar-powered power banks at affordable prices across different ranges. Discover the perfect power bank for your needs!">
+</head>
+<style>
+    * {
+        margin: 0px;
+        color: white;
+
+    }
+
+    body {
+        background-color: rgba(13, 13, 13, 0.908);
+        background-position: center;
+        min-height: 100vh;
+    }
+
+    NAV {
+        background: linear-gradient(135deg, #5372ff 20%, #16002c);
+        box-shadow: 3PX 3px 5px 0 rgba(155, 144, 144, 0.827),
+
+    }
+
+    NAV UL {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    NAV LI {
+        height: 50px;
+    }
+
+    NAV A {
+        color: #ffffff;
+        HEIGHT: 100%;
+        PADDING: 0 30PX;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+
+    }
+
+
+
+    nav li:first-child {
+        margin-right: auto;
+        font-size: 3em;
+
+    }
+
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        z-index: 999;
+        background-color: rgba(0, 0, 0, 0.733);
+        backdrop-filter: blur(10px);
+        box-shadow: -10px 0 -10px rgba(0, 0, 0, 0.114);
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .sidebar li {
+        width: 100%;
+    }
+
+    .sidebar a {
+        width: 100%
+    }
+
+    .menu {
+        display: none;
+    }
+
+    a {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    a:hover {
+        color: aqua;
+        transform: scale(1.05);
+        transition: transform 0.3s;
+    }
+
+    @media(max-width:800px) {
+        .hideonmobile {
+            display: none;
+        }
+
+        .menu {
+            display: block;
+        }
+    }
+
+    @media(max-width:400px) {
+        .sidebar {
+            width: 100%;
+        }
+
+    }
+
+    h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 3em;
+        margin-left: 5px;
+    }
+
+    div {
+        padding: 50px;
+        border-radius: 40px;
+    }
+
+    h2 {
+        font-family: verdana;
+        font-size: medium;
+    }
+
+    p {
+        font-family: helvetica;
+    }
+</style>
+
+<body>
+    <section id="home">
+        <nav>
+            <ul class="sidebar">
+                <li class="hh"><a href="about-us.html">RAYBAR</a></li>
+                <li onclick=hidesidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px"
+                            viewBox="0 -960 960 960" width="26px" fill="#e3e3e3">
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg></a></li>
+                <li id="h"><a href="home.html">HOME</a></li>
+                <li id="h"><a href="view.html">PRODUCTS</a></li>
+                <li id="h"><a href="add-to-cart.html">ADD TO CART</a></li>
+                <li id="h"><a href="prices.html">OFFERS</a></li>
+                <li id="h"><a href="review.html">REVIEWS</a></li>
+                <li id="h"><a href="contact-us.html">CONTACT US</a></li>
+                <li id="h"><a href="login.html">SIGNOUT</a></li>
+            </ul>
+            <ul>
+                <li class="hh"><a href="about-us.html">RAYBAR</a></li>
+                <li id="h" class="hideonmobile"><a href="home.html">HOME</a></li>
+                <li id="h" class="hideonmobile"><a href="view.html">PRODUCTS</a></li>
+                <li id="h" class="hideonmobile"><a href="add-to-cart.html">ADD TO CART</a></li>
+                <li id="h" class="hideonmobile"><a href="prices.html">OFFERS</a></li>
+                <li id="h" class="hideonmobile"><a href="review.html">REVIEWS</a></li>
+                <li id="h" class="hideonmobile"><a href="contact-us.html">CONTACT US</a></li>
+                <li id="h" class="hideonmobile"><a href="login.html">SIGNOUT</a></li>
+                <li class="menu" onclick=showsidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px"
+                            viewBox="0 -960 960 960" width="26px" fill="#e3e3e3">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                        </svg></a></li>
+            </ul>
+        </nav>
+    </section>
+    <hr>
+    <div>
+        <summary>
+            <h2>Name: Priya Mehta ⭐⭐⭐⭐⭐ </h2>
+        </summary>
+        <details>
+            <p>I absolutely love the Raybar Solar Power Bank! 🌞 It charges quickly under sunlight and lasts
+                surprisingly long perfect for my travel days and college use. I no longer worry about running out of
+                battery when I’m outdoors. The design feels sturdy yet lightweight, and the dual USB ports are super
+                handy. Honestly, this is one of the best tech purchases I’ve made totally worth every rupee! ❤</p>
+        </details>
+    </div>
+    <hr>
+    <div>
+        <summary>
+            <h2>Name: Kash ⭐⭐⭐⭐ </h2>
+        </summary>
+        <details>
+            <p>It's really a good product as it is handy and the design is just rocking. It's just perfect, down to the
+                bottom just perfect. </p>
+        </details>
+    </div>
+    <hr>
+    <div>
+        <summary>
+            <h2>Name: Riya Shetty⭐⭐⭐⭐⭐ </h2>
+        </summary>
+        <details>
+            <p>
+                “I recently bought the Raybar Solar Power Bank, and it’s honestly one of the best purchases I’ve made!
+                🌞 The solar charging works beautifully — even with moderate sunlight, it powers up fast and lasts for
+                days. The design feels sturdy yet sleek, and it’s been a total lifesaver during my travels. I’ve stopped
+                worrying about running out of battery wherever I go. Raybar truly delivers on performance and
+                reliability!” 🔋✨</p>
+        </details>
+    </div>
+    <hr>
+    <div>
+        <summary>
+            <h2>Name: Divya ⭐⭐⭐ </h2>
+        </summary>
+        <details>
+            <p>
+
+
+                🔋 I really wanted to like the Raybar Power Bank, but it didn’t meet my expectations.
+
+                The design is sleek and lightweight, and I love how easy it is to carry in my bag ✨. It also charges my
+                phone pretty fast during the first cycle ⚡.But the battery backup is not as strong as advertised. It
+                barely lasts for one full charge, and the power drops very quickly after that.</p>
+        </details>
+    </div>
+    <hr>
+    <div>
+        <summary>
+            <h2>Name: Akira ⭐⭐</h2>
+        </summary>
+        <details>
+            <p>
+                The power bank works, but the charging speed is slower than expected. It takes a long time to fully
+                recharge both the power bank itself and my devices. Not quite what I was hoping for, especially for the
+                price paid.Charges my devices well but the charging cable is a bit short and inconvenient. It holds
+                charge decently but sometimes charges slower than promised.</p>
+        </details>
+    </div>
+    <hr>
+    <script>
+        function showsidebar() {
+            document.querySelector('.sidebar').style.display = 'flex';
+        }
+        function hidesidebar() {
+            document.querySelector('.sidebar').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

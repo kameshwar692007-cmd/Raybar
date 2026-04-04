@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html  lang="en">
+    <head>
+        <title>Signup Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="We sell amazing solar-powered power banks at affordable prices across different ranges. Discover the perfect power bank for your needs!">
+    </head>
+    <style>
+        *{
+            color: rgb(255, 255, 255);
+        }
+        body{
+            background: url(https://img.freepik.com/premium-photo/abstract-illuminated-lithium-ion-battery-shape-with-lightning-bolt-icon-dark-background-concept-technology-battery-lighting-abstract-art-dark-background_918839-217165.jpg);
+            background-repeat:repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        @media(max-width:800px){
+            .logbox{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                align-content: space-evenly;
+                justify-content: center;
+                PADDING:20PX;
+                flex-wrap: wrap;
+               
+            }
+            body{
+                background: url(logbackmob.jpg);
+                background-repeat: repeat;
+               
+                background-position: center;
+            }
+            .head{
+                font-size: 20px;
+                color: #ffffff;
+            }
+            
+        }
+        .logbox{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: space-evenly;
+            justify-content: center;
+            padding: 20PX;
+            flex-wrap: wrap;
+            background: transparent;
+            border: 2px solid rgb(112, 201, 226);
+            width: fit-content;
+            height: fit-content;
+            margin: 5% auto 15% auto;
+            border-radius: 40px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 25px 10px rgb(52, 49, 238);
+          
+        
+    
+        }
+        .head{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            text-shadow: 0 10px 20px navy;
+            font-size: 3em;
+        }
+        .input{
+            font-family: sans-serif;
+            
+        }
+        .logbox input{
+            border: none;
+            background: transparent;
+            outline: none;
+            border-bottom: 2px solid rgb(255, 255, 255);
+        }
+        h2{
+            font-size: 2em;
+            font-family: sans-serif;
+        }
+        #sign{
+        
+            width: 200px;
+            height: 30px;
+            background: linear-gradient(135deg, #5372ff 20%, #16002c );
+            color: white;
+            font-size: medium;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 10px;
+            border-color: rgb(27, 148, 255);
+            border:10px;
+            
+    
+        }
+        a{
+            font-family:sans-serif;
+        }
+        a:hover{
+            color: #5372ff;
+            transition-duration: 0.3s;
+        }
+        #sign:hover{
+            opacity: 0.7;
+            transition: 0.5s;
+            cursor: pointer;
+            transform: scale(1.05);
+            transition: transform 0.3s;
+        }
+        
+    </style>
+    <body>
+     <h1 class="head">RAYBAR.COM</h1>
+     <section class="logbox">
+
+    <h2>SIGN IN</h2>
+    <label class="input">Name:
+    <input type="text" id="n" placeholder="Enter your name">
+    </label>
+    <br><br>
+    <label class="input">Email:
+    <input type="email" id="e" placeholder="Enter your email">
+    </label>
+    <br><br>
+    <label class="input">Phone:
+    <input type="text" id="ph"  placeholder="Enter your phone number">
+    </label>
+    <br><br>
+    <label class="input">Password:
+    <input type="password" id="pa1"  placeholder="Enter a password">
+    </label>
+    <br><br>
+    <label class="input">Re-enter:
+    <input type="password" id="pa2"  placeholder="Re-enter your password">
+    </label>
+    
+    <br><br>
+    <button id="sign">Sign In</button>
+    <br><br>
+    <a href="login.html">Back to login</a>
+    </section>
+    <script>
+        let sign=document.getElementById("sign");
+        let n=document.getElementById("n");
+        let e=document.getElementById("e");
+        let ph=document.getElementById("ph");
+        let pa1=document.getElementById("pa1");
+        let pa2=document.getElementById("pa2");
+        sign.addEventListener("click",function(){
+           if(n.value===""){
+            alert("Name cannot be empty");
+            return;
+            }
+           if(!e.value.includes("@gmail.com")){
+            alert("Email must contain @gmail.com");
+            return;
+           }
+           if(ph.value.length<10){
+            alert("Enter a valid phone number");
+            return;
+           }
+           if(pa1.value===""||pa2.value===""){
+            alert("Password fields cannot be empty");
+            return;
+           }
+           if(pa1.value!=pa2.value){
+            alert("The original password and the retyped password cannot be different");
+            return;
+           }
+            confirm("Sign In successful! Now you are a part of Raybar!");
+            window.location.href="home.html";
+        });
+    </script>
+    </body>
+</html>
