@@ -23,4 +23,5 @@ Home, About Us, Menu, Add to Cart, Contact Us, Login, Sign Up, Prices, Reviews, 
 * **Komugi** – Images, alignment, and overall layout support
 
 ### 🎯 Purpose
+
 To design and develop a real-world product landing experience while strengthening core frontend development skills through collaboration.
