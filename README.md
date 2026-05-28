@@ -25,3 +25,5 @@ Home, About Us, Menu, Add to Cart, Contact Us, Login, Sign Up, Prices, Reviews, 
 ### 🎯 Purpose
 
 To design and develop a real-world product landing experience while strengthening core frontend development skills through collaboration.
+
+this is the project given by our club
